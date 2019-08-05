@@ -17,6 +17,33 @@ var transaction = new Transaction()
     .sign(privkeySet)     // Signs all the inputs it can
 ```
 
+## Example constructing transactions v4
+ ```javascript
+ const bitcore = require('bitcore-lib-zelcash')
+ let transaction = new bitcore.Transaction()
+ transaction.version = 4
+ transaction.fOverwintered = true
+ transaction.nVersionGroupId = 0x892F2085
+ transaction.nExpiryHeight = 233715
+ let utxo = {
+   txId: "d1ad0fb195559fb84ef0227823992950e558d0a4dcfcc7f7d8e6f40a3fe6b131",
+   outputIndex: 0,
+   script: "76a91473562bc6a1db9dc6effebc1ef4379942feb3cf2c88ac",
+   satoshis: 899774
+ }
+ let amount = 500000
+ let fee = 1000
+ let change = utxo.satoshis - amount - fee //398,774
+ let recipientAddr = "t1W3DXSzNbXPWF7ghEU3xcqjLfBAKJGcmN4"
+ let privkey = bitcore.PrivateKey.fromWIF('L3T1s1TYP9oyhHpXgkyLoJFGniEgkv2Jhi138d7R2yJ9F4QdDU2m');
+ let myAddress = privkey.toAddress().toString()
+ transaction.from(utxo)
+   .to(recipientAddr, amount)
+   .to(myAddress, change)
+   .sign(privkey)
+   .toString()
+ ```
+
 You can obtain the input and output total amounts of the transaction in satoshis by accessing the fields `inputAmount` and `outputAmount`.
 
 Now, this could just be serialized to hexadecimal ASCII values (`transaction.serialize()`) and sent over to the bitcoind reference client.
