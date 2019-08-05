@@ -669,8 +669,8 @@
       "dev": true
     },
     "bitcore-build-zelcash": {
-      "version": "git://github.com/TheTrunk/bitcore-build-zelcash.git#7971f305d53dd91e99a969b9626cec7aefcc271f",
-      "from": "git://github.com/TheTrunk/bitcore-build-zelcash.git#master",
+      "version": "git://github.com/usdfork/bitcore-build-zelcash.git#master",
+      "from": "git://github.com/usdfork/bitcore-build-zelcash.git#master",
       "dev": true,
       "requires": {
         "brfs": "^1.2.0",
