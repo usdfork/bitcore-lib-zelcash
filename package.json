@@ -1,7 +1,7 @@
 {
-  "name": "bitcore-lib-zelcash",
-  "version": "0.14.0",
-  "description": "A pure and powerful JavaScript ZelCash library.",
+  "name": "bitcore-lib-zcash",
+  "version": "0.13.19",
+  "description": "A pure and powerful JavaScript Zcash library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -60,14 +60,6 @@
       "email": "jack@z.cash"
     },
     {
-      "name": "Larry Ludlow",
-      "email": "larry@myhush.org"
-    },
-    {
-      "name": "TheTrunk",
-      "email": "tadeas.kmenta@zel.cash"
-    },
-    {
       "name": "Simon Liu",
       "email": "simon@z.cash"
     },
@@ -77,7 +69,7 @@
     }
   ],
   "keywords": [
-    "zelcash",
+    "zcash",
     "transaction",
     "address",
     "p2p",
@@ -94,7 +86,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/TheTrunk/bitcore-lib-zelcash.git"
+    "url": "https://github.com/zcash-hackworks/bitcore-lib-zcash.git"
   },
   "browser": {
     "request": "browser-request"
@@ -108,7 +100,7 @@
     "lodash": "=3.10.1"
   },
   "devDependencies": {
-    "bitcore-build-zelcash": "git://github.com/TheTrunk/bitcore-build-zelcash#master",
+    "bitcore-build-zcash": "zcash-hackworks/bitcore-build-zcash",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
